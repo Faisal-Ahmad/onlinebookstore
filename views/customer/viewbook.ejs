@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Book Details</title>
+</head>
+<body>
+	
+	<form method="post">
+		<table align="center">
+      <tr>
+        <td colspan="2">
+          <h1>Details of the Book</h1>
+        </td>
+      </tr>
+            <tr>
+				<td><h2>ID :</h2></td>
+				<td><input type="text" name="id"value="<%=book.id%>" readonly></td>
+			</tr>
+			<tr>
+				<td><h2>Name :</h2></td>
+				<td><h3><%=book.name%></h3></td>
+			</tr>
+			<tr>
+				<td><h2>Author :</h2> </td>
+				<td><h3><%=book.author%></h3></td>
+			</tr>
+            <tr>
+				<td><h2>Category :</h2> </td>
+                <td><h3><%=book.category%></h3></td>
+			</tr>
+            <tr>
+				<td><h2>Price :</h2></td>
+				<td><h3><%=book.price%></h3></td>
+			</tr>
+            <tr>
+				<td><h2>Short Description :</h2></td>
+				<td><h4><%=book.description%>"</h4></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+                    <input type="button" onclick="location.href='/customer/cart/<%=book.id%>'" value="Add To cart">
+                    <input type="button" onclick="location.href='/customer'" value="Back">
+                </td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

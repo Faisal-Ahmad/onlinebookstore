@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin</title>
+</head>
+<body>
+	<form method="post" >
+        <table align="center" border="1px solid black" width="80%">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+            </tr>
+            <% for(var i=0; i < adminlist.length; i++){ %>
+                    <tr>
+                        <td>
+                            <%= adminlist[i].id %>
+                        </td>
+                        <td>
+                            <%= adminlist[i].name %>
+                        </td>
+                        <td>
+                            <%= adminlist[i].email %>
+                        </td>
+                        <td>
+                            <%= adminlist[i].phone %>
+                        </td>
+                    </tr>
+                    <% } %>
+        </table>
+        <br/><br/>
+        <div align="center">
+            <input type="button" onclick="location.href='/admin'" value="Back">
+        </div>
+    </form>
+
+</body>
+</html>

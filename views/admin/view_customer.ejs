@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin</title>
+</head>
+<body>
+	<form method="post" >
+        <table align="center" border="1px solid black" width="80%">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Remove</th>
+            </tr>
+            <% for(var i=0; i < customerlist.length; i++){ %>
+                    <tr>
+                        <td>
+                            <%= customerlist[i].id %>
+                        </td>
+                        <td>
+                            <%= customerlist[i].name %>
+                        </td>
+                        <td>
+                            <%= customerlist[i].email %>
+                        </td>
+                        <td>
+                            <%= customerlist[i].phone %>
+                        </td>
+                        <td>
+                            <input type="button" onclick="location.href='/admin/delete/<%= customerlist[i].id%>'" value="Delete">
+                        </td>
+                    </tr>
+                    <% } %>
+        </table>
+        <br/><br/>
+        <div align="center">
+            <input type="button" onclick="location.href='/admin'" value="Back">
+        </div>
+    </form>
+
+</body>
+</html>

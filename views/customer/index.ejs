@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin</title>
+</head>
+<body>
+		<div align="right">
+			<input type="button" onclick="location.href='/logout'" value="Logout">
+		</div>
+		<br/><br/>
+		<hr/>
+			<div align="center">
+			<input type="button" onclick="location.href='/customer/profile'" value="View Profile">	|	
+			<input type="button" onclick="location.href='/customer/mycart'" value="MyCart">
+			</div>
+		 <hr/>
+		 <table border="1px" width="50%" align="center">
+		 	<tr>
+				<th colspan="3">
+					<h3>Sci-Fi Books</h3>
+				</th>
+			</tr>
+			<tr>
+				<td>ID</td>
+				<td>Book Name</td>
+				<td>For More Information</td>
+			</tr>
+		 	<% for(var i=0; i < booklist.length; i++){ 
+			 if(booklist[i].category == "sci-fi") {%>
+		 		
+                    <tr>
+                        <td>
+                            <%= booklist[i].id %>
+                        </td>
+                        <td>
+                            <%= booklist[i].name %>
+                        </td>
+                        <td>
+                            <input type="button" onclick="location.href='/customer/viewbook/<%= booklist[i].id%>'" value="Details">
+                        </td>
+					</tr>
+                    <%} } %>
+			</table>
+			<br/><br/>
+			<table border="1px" width="50%" align="center">
+		 	<tr>
+				<th colspan="3">
+					<h3>Literature Books</h3>
+				</th>
+			</tr>
+			<tr>
+				<td>ID</td>
+				<td>Book Name</td>
+				<td>For More Information</td>
+			</tr>
+		 	<% for(var i=0; i < booklist.length; i++){ 
+			 if(booklist[i].category == "literature") {%>
+		 		
+                    <tr>
+                        <td>
+                            <%= booklist[i].id %>
+                        </td>
+                        <td>
+                            <%= booklist[i].name %>
+                        </td>
+                        <td>
+                            <input type="button" onclick="location.href='/customer/viewbook/<%= booklist[i].id%>'" value="Details">
+                        </td>
+					</tr>
+                    <%} } %>
+			</table>
+			<br/><br/>
+			<table border="1px" width="50%" align="center">
+		 	<tr>
+				<th colspan="3">
+					<h3>Novel Books</h3>
+				</th>
+			</tr>
+			<tr>
+				<td>ID</td>
+				<td>Book Name</td>
+				<td>For More Information</td>
+			</tr>
+		 	<% for(var i=0; i < booklist.length; i++){ 
+			 if(booklist[i].category == "novel") {%>
+		 		
+                    <tr>
+                        <td>
+                            <%= booklist[i].id %>
+                        </td>
+                        <td>
+                            <%= booklist[i].name %>
+                        </td>
+                        <td>
+                            <input type="button" onclick="location.href='/customer/viewbook/<%= booklist[i].id%>'" value="Details">
+                        </td>
+					</tr>
+                    <%} } %>
+			</table>
+
+</body>
+</html>

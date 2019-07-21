@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin</title>
+</head>
+<body>
+	<form method="post">
+        <table align="center">
+            <tr>
+                <td colspan="2">
+                    <h2>Your Information</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>ID :</h3>
+                </td>
+                <td>
+                    <h3><%=user.id%></h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>Name :</h3>
+                </td>
+                <td>
+                    <input type="text" name="name" value="<%=user.name%>"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>Email :</h3>
+                </td>
+                <td>
+                    <input type="text" name="email" value="<%=user.email%>"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>Phone :</h3>
+                </td>
+                <td>
+                    <input type="text" name="phone" value="<%=user.phone%>"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <input type="submit"  value="Update"/>
+                    <input type="button" onclick="location.href='/admin'" value="Back">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>
